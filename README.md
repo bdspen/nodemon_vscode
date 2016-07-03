@@ -2,11 +2,16 @@
 <img src="https://camo.githubusercontent.com/fd1ea21338ceeef34920e44e97d099f3c47a78c3/687474703a2f2f6e6f64656d6f6e2e696f2f6e6f64656d6f6e2e737667" width="150" style="display: inline">
 <img src="https://pbs.twimg.com/profile_images/676630166190166017/UYxw-HcD_400x400.png" width="150" style="display: inline">
 
-#### In this tutorial I will explain how to attach the Visual Studio Code debugger to an app launched by [Nodemon.](https://github.com/remy/nodemon)
+#### In this tutorial I will explain how to attach the Visual Studio Code debugger to a nodeJS app launched by [Nodemon.](https://github.com/remy/nodemon)
+
+##### Why do I want this?
+While running your nodeJS app in VS Code debugger mode you have to re-launch the debugger every time you make a change to one of your app files. This takes time and is tedious. VS Code actually allows you to attach a debugger to any currently running nodeJS app.
+So, attaching the debugger to an app launched by nodemon will _automatically re-launch_ your project when any file is saved. This removes a few steps from the development process and streamlines workflow with the VS Code debugger.
 
 ## Setting Up Nodemon
-Make sure you have [nodemon](https://github.com/remy/nodemon) installed globally on your machine. by running: `npm install -g nodemon
-` or locally in your project: `npm install --save-dev nodemon`
+To start, Install [nodemon](https://github.com/remy/nodemon) globally on your machine. by running: `npm install -g nodemon
+` or install locally in your project: `npm install --save-dev nodemon`
+
 ## Setting Up VS Code Debugger
 If you already have a launch.json for your project you can <a href="#configurations">skip</a> this step.
 
