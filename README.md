@@ -32,4 +32,4 @@ terminated by nodemon. this is useful to us because nodemon will restart the app
 #### Setting the request to VS Code
 Once your launch.json file is setup we need to change the request we are making to the VS Code debugger. Ordinarily you would just request that VS Code "Launch"
  your app in debugger mode, but since VS Code does not have any utility like nodemon that will restart the app on changes made, we need to _attach_ the VS Code debugger to our external application that is being run by nodemon.
-To do this simply click on the menu item in the debugger view and change <img src="./img/aunch.png" height="30" style="display: inline"> to <img src="./img/attach.png" height="30" style="display: inline">.
+To do this simply click on the menu item in the debugger view and change <img src="./img/launch.png" height="30" style="display: inline"> to <img src="./img/attach.png" height="30" style="display: inline">.
