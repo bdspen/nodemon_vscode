@@ -11,8 +11,8 @@ To Set up the VS Code debugger, first bring up the debug view by clicking the de
 
 Once you have the debug view open, click the settings gear. This will open a popup that allows you to select your enviornment, in this case, click Node.js.
 
-<img src="1.png" height="500" style="display: inline">
-<img src="2.png" height="500" style="display: inline">
+<img src="1.png" height="50%" style="display: inline">
+<img src="2.png" height="50%" style="display: inline">
 
 vs code will now  create a configuration file for you, titled launch.json. It should look something like this.
 
