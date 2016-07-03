@@ -62,4 +62,4 @@ Server listening on port :50717
 ~~~
 
 Now your app is being launched by nodemon. Next you must attach the VS Code debugger to your running app. 
-Go back to your VS Code debug view and click the "Play"<img src="./img/4.png" height="24"> icon. The VS Code debugger is now available to you to use.
+Go back to your VS Code debug view and click the "Play"<img src="./img/play.png" height="24"> icon. The VS Code debugger is now available to you to use and errors and console feedback will appear in your command line where you ran nodemon.
