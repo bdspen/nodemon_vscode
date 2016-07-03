@@ -1,5 +1,5 @@
 # Using nodemon in Visual Studio Code Debugger
-<img src="nodemon.svg">
+<img src="https://camo.githubusercontent.com/fd1ea21338ceeef34920e44e97d099f3c47a78c3/687474703a2f2f6e6f64656d6f6e2e696f2f6e6f64656d6f6e2e737667">
 <img src="VSCode.png">
 
 #### In this tuorial I will explain how to attach the Visual Studio Code debugger to an app launched by [Nodemon.](https://github.com/remy/nodemon)
