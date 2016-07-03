@@ -5,7 +5,7 @@
 #### In this tutorial I will explain how to attach the Visual Studio Code debugger to an app launched by [Nodemon.](https://github.com/remy/nodemon)
 
 ## Setting Up VS Code Debugger
-If you already have a launch.json for your project you can <a href="configurations">skip</a> this step.
+If you already have a launch.json for your project you can <a href="#configurations">skip</a> this step.
 To Set up the VS Code debugger, first bring up the debug view by clicking the debug icon in the sidebar.
 
 <img src="https://code.visualstudio.com/images/debugging_debugicon.png">
