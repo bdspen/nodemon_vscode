@@ -6,6 +6,9 @@
 
 ## Setting Up VS Code Debugger
 If you already have a launch.json for your project you can <a href="#configurations">skip</a> this step.
+Make sure you have [nodemon](https://github.com/remy/nodemon) installed globally on your machine. by running: `npm install -g nodemon
+` or locally in your project: `npm install --save-dev nodemon`
+
 To Set up the VS Code debugger, first bring up the debug view by clicking the debug icon in the sidebar.
 
 <img src="https://code.visualstudio.com/images/debugging_debugicon.png">
