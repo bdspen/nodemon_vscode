@@ -1,16 +1,17 @@
 # Using nodemon in Visual Studio Code Debugger
-<img src="https://camo.githubusercontent.com/fd1ea21338ceeef34920e44e97d099f3c47a78c3/687474703a2f2f6e6f64656d6f6e2e696f2f6e6f64656d6f6e2e737667" width="200" style="display: inline">
-<img src="https://pbs.twimg.com/profile_images/676630166190166017/UYxw-HcD_400x400.png" width="200" style="display: inline">
+<img src="https://camo.githubusercontent.com/fd1ea21338ceeef34920e44e97d099f3c47a78c3/687474703a2f2f6e6f64656d6f6e2e696f2f6e6f64656d6f6e2e737667" width="150" style="display: inline">
+<img src="https://pbs.twimg.com/profile_images/676630166190166017/UYxw-HcD_400x400.png" width="150" style="display: inline">
 
-#### In this tuorial I will explain how to attach the Visual Studio Code debugger to an app launched by [Nodemon.](https://github.com/remy/nodemon)
+#### In this tutorial I will explain how to attach the Visual Studio Code debugger to an app launched by [Nodemon.](https://github.com/remy/nodemon)
 
 ## Setting Up VS Code Debugger
 To Set up the VS Code debugger, first bring up the debug view by clicking the debug icon in the sidebar.
-<img src="debugging_debugicon.png)" width="200">
+
+<img src="https://code.visualstudio.com/images/debugging_debugicon.png">
 
 Once you have the debug view open, click the settings gear. This will open a popup that allows you to select your enviornment, in this case, click Node.js. 
-![](1.png)
-![](2.png)
+<img src="1.png" width="250" style="display: inline">
+<img src="2.png" width="250" style="display: inline">
 
 vs code will now  create a configuration file for you, titled launch.json. It should look something like this.
 
