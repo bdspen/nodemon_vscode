@@ -1,10 +1,11 @@
+### 07/03/2016
 # Using nodemon and Visual Studio Code Debugger together
 <img src="https://camo.githubusercontent.com/fd1ea21338ceeef34920e44e97d099f3c47a78c3/687474703a2f2f6e6f64656d6f6e2e696f2f6e6f64656d6f6e2e737667" width="150" style="display: inline">
 <img src="https://pbs.twimg.com/profile_images/676630166190166017/UYxw-HcD_400x400.png" width="150" style="display: inline">
 
 #### In this tutorial I will explain how to attach the Visual Studio Code debugger to a nodeJS app launched by [Nodemon.](https://github.com/remy/nodemon)
 
-##### Why do I want this?
+##### Why do you want this?
 While running a nodeJS app in VS Code debugger mode you have to re-launch the debugger every time you make a change to one of your app files. This takes time and is tedious. VS Code actually allows you to attach a debugger to any currently running nodeJS app.
 So, attaching the debugger to an app launched by nodemon will allow you to use the VS Code debugger in an app that is _automatically re-launched_ on every changed file. This removes a few steps from the development process and streamlines workflow with the VS Code debugger.
 
@@ -43,10 +44,14 @@ terminated by nodemon. This is useful because nodemon will restart the app on ev
 #### Setting the request to "attach" in VS Code
 Once the launch.json file is setup it's time to change the request you are making to the VS Code debugger. Ordinarily one might just request that VS Code "Launch"
  the app in debugger mode, but since VS Code does not have any utility like nodemon that will restart the app on new changes, you need to _attach_ the VS Code debugger to the external application that is being run by nodemon.
-To do this simply click on the menu item in the debugger view and change <img src="./img/launch.png" height="30" style="display: inline"> to <img src="./img/attach.png" height="30" style="display: inline">.
+To do this simply click on the menu item in the debugger view and change
 
-#### Running the Application
-You should be all set up, so to run your application with nodemon and debugger attached type:
+<img src="./img/launch.png" height="30" style="display: inline"> 
+to
+<img src="./img/attach.png" height="30" style="display: inline">.
+
+#### Running your Application
+You should be all set up, so to run your application with nodemon and debugger attached, got you your command line and type:
 
 `$ nodemon --debug server.js`
 
@@ -61,5 +66,5 @@ Debugger listening on port 5858
 Server listening on port :50717
 ~~~
 
-Now your app is being launched by nodemon. Next you must attach the VS Code debugger to your running app. 
+Now your app is being launched by nodemon. Any saved changes you make will re-launch your application. Next you must attach the VS Code debugger to your running app. 
 Go back to your VS Code debug view and click the "Play"<img src="./img/play.png" height="18"> icon. The VS Code debugger is now available to you to use and errors and console feedback will appear in your command line where you ran nodemon.
