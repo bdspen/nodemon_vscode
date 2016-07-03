@@ -32,9 +32,9 @@ VS Code will now create a configuration file, titled launch.json. It should look
 There will be two `"configurations"`, Which configuration is available depends on which one you request VS Code to use. `"Launch"` will launch the current project 
 in debug mode, while `"Attach"` will allow the VS Code debugger to attach itself to an app that is running elsewhere on your system, for instance, an app launched by nodemon.
 
-_To see more about the launch.json file and how to configure it, consult the _ [Visual Studio Code documentation](https://code.visualstudio.com/Docs/editor/debugging)
+_To see more about the launch.json file and how to configure it, consult the_ [Visual Studio Code documentation](https://code.visualstudio.com/Docs/editor/debugging)
 
-In order for you to run nodemon with VS Code, you have to set the attribute `"restart"` to `true`. This sets the VS Code debugger to re-attach to your node.js application after it is 
+In order for you to run nodemon with VS Code, you have to **set the attribute `"restart"` to `true`**. This sets the VS Code debugger to re-attach to your node.js application after it is 
 terminated by nodemon. This is useful because nodemon will restart the app on every save made.
 
  _From VS Code Docs:_
@@ -62,4 +62,4 @@ Server listening on port :50717
 ~~~
 
 Now your app is being launched by nodemon. Next you must attach the VS Code debugger to your running app. 
-Go back to your VS Code debug view and click the "Play"<img src="./img/play.png" height="24"> icon. The VS Code debugger is now available to you to use and errors and console feedback will appear in your command line where you ran nodemon.
+Go back to your VS Code debug view and click the "Play"<img src="./img/play.png" height="18"> icon. The VS Code debugger is now available to you to use and errors and console feedback will appear in your command line where you ran nodemon.
