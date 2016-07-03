@@ -4,10 +4,11 @@
 
 #### In this tutorial I will explain how to attach the Visual Studio Code debugger to an app launched by [Nodemon.](https://github.com/remy/nodemon)
 
-## Setting Up VS Code Debugger
-If you already have a launch.json for your project you can <a href="#configurations">skip</a> this step.
+## Setting Up Nodemon
 Make sure you have [nodemon](https://github.com/remy/nodemon) installed globally on your machine. by running: `npm install -g nodemon
 ` or locally in your project: `npm install --save-dev nodemon`
+## Setting Up VS Code Debugger
+If you already have a launch.json for your project you can <a href="#configurations">skip</a> this step.
 
 To Set up the VS Code debugger, first bring up the debug view by clicking the debug icon in the sidebar.
 
