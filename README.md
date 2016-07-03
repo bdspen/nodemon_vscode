@@ -29,4 +29,4 @@ terminated by nodemon. this is useful to us because nodemon will restart the app
 > The restart attribute controls whether the Node.js debugger automatically restarts after the debug session has ended. This feature is useful if you use nodemon to restart Node.js on file changes. Setting the launch configuration attribute restart to true makes node-debug automatically try to re-attach to Node.js after Node.js has terminated.
 
 Once your launch.json file is setup we need to change the request we are making to the VS Code debugger. Since we will be running our app with nodemon on the command line and attaching the VS Code debugger,
-we want to change the request to attach. To do this click on the menu item in the debugger view and change . <img src="launch.png"style="display: inline"> to <img src="attach.png" style="display: inline">.
+we want to change the request to attach. To do this click on the menu item in the debugger view and change . <img src="launch.png" height="50%"style="display: inline"> to <img src="attach.png" height="50%"style="display: inline">.
