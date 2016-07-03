@@ -5,8 +5,8 @@
 #### In this tutorial I will explain how to attach the Visual Studio Code debugger to a nodeJS app launched by [Nodemon.](https://github.com/remy/nodemon)
 
 ##### Why do I want this?
-While running your nodeJS app in VS Code debugger mode you have to re-launch the debugger every time you make a change to one of your app files. This takes time and is tedious. VS Code actually allows you to attach a debugger to any currently running nodeJS app.
-So, attaching the debugger to an app launched by nodemon will _automatically re-launch_ your project when any file is saved. This removes a few steps from the development process and streamlines workflow with the VS Code debugger.
+While running a nodeJS app in VS Code debugger mode you have to re-launch the debugger every time you make a change to one of your app files. This takes time and is tedious. VS Code actually allows you to attach a debugger to any currently running nodeJS app.
+So, attaching the debugger to an app launched by nodemon will allow you to use the VS Code debugger in an app that is _automatically re-launched_ on every changed file. This removes a few steps from the development process and streamlines workflow with the VS Code debugger.
 
 ## Setting Up Nodemon
 To start, Install [nodemon](https://github.com/remy/nodemon) globally on your machine. by running: `npm install -g nodemon
@@ -23,24 +23,43 @@ Once you have the debug view open, click the settings gear. This will open a pop
 
 <img src="./img/2.png" height="400" style="display: inline">
 
-VS Code will now  create a configuration file for you, titled launch.json. It should look something like this:
+VS Code will now create a configuration file, titled launch.json. It should look something like this:
 
 <img src="./img/4.png" height="800">
 
 <a name="configurations"></a>
 #### Configurations
-There will be two `"configurations"`, Which configuration is available to us depends on which one we request VS Code to use. `"Launch"` will launch the current project 
-in debug mode, while `"Attach"` will allow the VS Code debugger to attach itself to an app that is running elsewhere on your system, for instance, our app launched by nodemon.
+There will be two `"configurations"`, Which configuration is available depends on which one you request VS Code to use. `"Launch"` will launch the current project 
+in debug mode, while `"Attach"` will allow the VS Code debugger to attach itself to an app that is running elsewhere on your system, for instance, an app launched by nodemon.
 
 _To see more about the launch.json file and how to configure it, consult the _ [Visual Studio Code documentation](https://code.visualstudio.com/Docs/editor/debugging)
 
-In order for us to run nodemon with VS Code, we have to set the attribute `"restart"` to `true`. This allows the VS Code debugger to re-attach to our node.js application after it is 
-terminated by nodemon. this is useful to us because nodemon will restart the app on every save we make.
+In order for you to run nodemon with VS Code, you have to set the attribute `"restart"` to `true`. This sets the VS Code debugger to re-attach to your node.js application after it is 
+terminated by nodemon. This is useful because nodemon will restart the app on every save made.
 
  _From VS Code Docs:_
 > The restart attribute controls whether the Node.js debugger automatically restarts after the debug session has ended. This feature is useful if you use nodemon to restart Node.js on file changes. Setting the launch configuration attribute restart to true makes node-debug automatically try to re-attach to Node.js after Node.js has terminated.
 
 #### Setting the request to VS Code
-Once your launch.json file is setup we need to change the request we are making to the VS Code debugger. Ordinarily you would just request that VS Code "Launch"
- your app in debugger mode, but since VS Code does not have any utility like nodemon that will restart the app on changes made, we need to _attach_ the VS Code debugger to our external application that is being run by nodemon.
+Once the launch.json file is setup it's time to change the request you are making to the VS Code debugger. Ordinarily one might just request that VS Code "Launch"
+ the app in debugger mode, but since VS Code does not have any utility like nodemon that will restart the app on new changes, you need to _attach_ the VS Code debugger to the external application that is being run by nodemon.
 To do this simply click on the menu item in the debugger view and change <img src="./img/launch.png" height="30" style="display: inline"> to <img src="./img/attach.png" height="30" style="display: inline">.
+
+#### Running the Application
+You should be all set up, so to run your application with nodemon and debugger attached type:
+
+`$ nodemon --debug server.js`
+
+you should see:
+
+~~~
+[nodemon] 1.9.2
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `node --debug server.js`
+Debugger listening on port 5858
+Server listening on port :50717
+~~~
+
+Now your app is being launched by nodemon. Next you must attach the VS Code debugger to your running app. 
+Go back to your VS Code debug view and click the "Play"<img src="./img/4.png" height="24"> icon. The VS Code debugger is now available to you to use.
