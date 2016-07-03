@@ -11,12 +11,13 @@ To Set up the VS Code debugger, first bring up the debug view by clicking the de
 
 Once you have the debug view open, click the settings gear. This will open a popup that allows you to select your enviornment, in this case, click Node.js.
 
-<img src="2.png" height="400" style="display: inline">
+<img src="img/2.png" height="400" style="display: inline">
 
 VS Code will now  create a configuration file for you, titled launch.json. It should look something like this:
 
-<img src="4.png" height="800">
+<img src="img/4.png" height="800">
 
+#### Configurations
 There will be two `"configurations"`, Which configuration is available to us depends on which one we request VS Code to use. `"Launch"` will launch the current project 
 in debug mode, while `"Attach"` will allow the VS Code debugger to attach itself to an app that is running elsewhere on your system, for instance, our app launched by nodemon.
 
@@ -28,5 +29,7 @@ terminated by nodemon. this is useful to us because nodemon will restart the app
  _From VS Code Docs:_
 > The restart attribute controls whether the Node.js debugger automatically restarts after the debug session has ended. This feature is useful if you use nodemon to restart Node.js on file changes. Setting the launch configuration attribute restart to true makes node-debug automatically try to re-attach to Node.js after Node.js has terminated.
 
-Once your launch.json file is setup we need to change the request we are making to the VS Code debugger. Since we will be running our app with nodemon on the command line and attaching the VS Code debugger,
-we want to change the request to attach. To do this click on the menu item in the debugger view and change . <img src="launch.png" height="30" style="display: inline"> to <img src="attach.png" height="30" style="display: inline">.
+#### Setting the request to VS Code
+Once your launch.json file is setup we need to change the request we are making to the VS Code debugger. Ordinarily you would just request that VS Code "Launch"
+ your app in debugger mode, but since VS Code does not have any utility like nodemon that will restart the app on changes made, we need to _attach_ the VS Code debugger to our external application that is being run by nodemon.
+To do this simply click on the menu item in the debugger view and change <img src="img/aunch.png" height="30" style="display: inline"> to <img src="img/attach.png" height="30" style="display: inline">.
