@@ -40,7 +40,7 @@ terminated by nodemon. This is useful because nodemon will restart the app on ev
  _From VS Code Docs:_
 > The restart attribute controls whether the Node.js debugger automatically restarts after the debug session has ended. This feature is useful if you use nodemon to restart Node.js on file changes. Setting the launch configuration attribute restart to true makes node-debug automatically try to re-attach to Node.js after Node.js has terminated.
 
-#### Setting the request to VS Code
+#### Setting the request to "attach" in VS Code
 Once the launch.json file is setup it's time to change the request you are making to the VS Code debugger. Ordinarily one might just request that VS Code "Launch"
  the app in debugger mode, but since VS Code does not have any utility like nodemon that will restart the app on new changes, you need to _attach_ the VS Code debugger to the external application that is being run by nodemon.
 To do this simply click on the menu item in the debugger view and change <img src="./img/launch.png" height="30" style="display: inline"> to <img src="./img/attach.png" height="30" style="display: inline">.
