@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Nodemon vscode by bdspen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Nodemon vscode</h1>
+      <h2 class="project-tagline">How to use nodemon with VS Code to automate the debugging process</h2>
+      <a href="https://github.com/bdspen/nodemon_vscode" class="btn">View on GitHub</a>
+      <a href="https://github.com/bdspen/nodemon_vscode/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/bdspen/nodemon_vscode/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h3>
+<a id="07032016" class="anchor" href="#07032016" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>07/03/2016</h3>
+
+<h1>
+<a id="using-nodemon-and-visual-studio-code-debugger-together-to-automate-debugging-workflow" class="anchor" href="#using-nodemon-and-visual-studio-code-debugger-together-to-automate-debugging-workflow" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using Nodemon and Visual Studio Code Debugger together to Automate Debugging Workflow</h1>
+
+<p><img src="https://camo.githubusercontent.com/fd1ea21338ceeef34920e44e97d099f3c47a78c3/687474703a2f2f6e6f64656d6f6e2e696f2f6e6f64656d6f6e2e737667" width="150">
+<img src="https://pbs.twimg.com/profile_images/676630166190166017/UYxw-HcD_400x400.png" width="150"></p>
+
+<h4>
+<a id="in-this-tutorial-i-will-explain-how-to-attach-the-visual-studio-code-debugger-to-a-nodejs-app-launched-by-nodemon" class="anchor" href="#in-this-tutorial-i-will-explain-how-to-attach-the-visual-studio-code-debugger-to-a-nodejs-app-launched-by-nodemon" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>In this tutorial I will explain how to attach the Visual Studio Code debugger to a nodeJS app launched by <a href="https://github.com/remy/nodemon">Nodemon.</a>
+</h4>
+
+<h5>
+<a id="why-do-you-want-this" class="anchor" href="#why-do-you-want-this" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why do you want this?</h5>
+
+<p>While running a nodeJS app in VS Code debugger mode you have to re-launch the debugger every time you make a change to one of your app files. This takes time and is tedious. VS Code actually allows you to attach a debugger to any currently running nodeJS app.
+So, attaching the debugger to an app launched by nodemon will allow you to use the VS Code debugger in an app that is <em>automatically re-launched</em> on every changed file. This removes a few steps from the development process and streamlines workflow with the VS Code debugger.</p>
+
+<h2>
+<a id="setting-up-nodemon" class="anchor" href="#setting-up-nodemon" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting Up Nodemon</h2>
+
+<p>To start, Install <a href="https://github.com/remy/nodemon">nodemon</a> globally on your machine. by running: <code>npm install -g nodemon
+</code> or install locally in your project: <code>npm install --save-dev nodemon</code></p>
+
+<h2>
+<a id="setting-up-vs-code-debugger" class="anchor" href="#setting-up-vs-code-debugger" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting Up VS Code Debugger</h2>
+
+<p>If you already have a launch.json for your project you can <a href="#configurations">skip</a> this step.</p>
+
+<p>To Set up the VS Code debugger, first bring up the debug view by clicking the debug icon in the sidebar.</p>
+
+<p><img src="https://code.visualstudio.com/images/debugging_debugicon.png"></p>
+
+<p>Once you have the debug view open, click the settings gear. This will open a popup that allows you to select your enviornment, in this case, click Node.js.</p>
+
+<p><img src="https://raw.githubusercontent.com/bdspen/nodemon_vscode/master/img/2.png" height="400"></p>
+
+<p>VS Code will now create a configuration file, titled launch.json. It should look something like this:</p>
+
+<p><img src="https://raw.githubusercontent.com/bdspen/nodemon_vscode/master/img/4.png" height="800"></p>
+
+<p><a name="configurations"></a></p>
+
+<h4>
+<a id="configurations" class="anchor" href="#configurations" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Configurations</h4>
+
+<p>There will be two <code>"configurations"</code>, Which configuration is available depends on which one you request VS Code to use. <code>"Launch"</code> will launch the current project 
+in debug mode, while <code>"Attach"</code> will allow the VS Code debugger to attach itself to an app that is running elsewhere on your system, for instance, an app launched by nodemon.</p>
+
+<p><em>To see more about the launch.json file and how to configure it, consult the</em> <a href="https://code.visualstudio.com/Docs/editor/debugging">Visual Studio Code documentation</a></p>
+
+<p>In order for you to run nodemon with VS Code, you have to <strong>set the attribute <code>"restart"</code> to <code>true</code></strong>. This sets the VS Code debugger to re-attach to your node.js application after it is 
+terminated by nodemon. This is useful because nodemon will restart the app on every save made.</p>
+
+<p><em>From VS Code Docs:</em></p>
+
+<blockquote>
+<p>The restart attribute controls whether the Node.js debugger automatically restarts after the debug session has ended. This feature is useful if you use nodemon to restart Node.js on file changes. Setting the launch configuration attribute restart to true makes node-debug automatically try to re-attach to Node.js after Node.js has terminated.</p>
+</blockquote>
+
+<h4>
+<a id="setting-the-request-to-attach-in-vs-code" class="anchor" href="#setting-the-request-to-attach-in-vs-code" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting the request to "attach" in VS Code</h4>
+
+<p>Once the launch.json file is setup it's time to change the request you are making to the VS Code debugger. Ordinarily one might just request that VS Code "Launch"
+ the app in debugger mode, but since VS Code does not have any utility like nodemon that will restart the app on new changes, you need to <em>attach</em> the VS Code debugger to the external application that is being run by nodemon.
+To do this simply click on the menu item in the debugger view and change</p>
+
+<p><img src="https://raw.githubusercontent.com/bdspen/nodemon_vscode/master/img/launch.png" height="30"> 
+to
+<img src="https://raw.githubusercontent.com/bdspen/nodemon_vscode/master/img/attach.png" height="30">.</p>
+
+<h4>
+<a id="running-your-application" class="anchor" href="#running-your-application" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Running your Application</h4>
+
+<p>You should be all set up, so to run your application with nodemon and debugger attached, got you your command line and type:</p>
+
+<p><code>$ nodemon --debug server.js</code></p>
+
+<p>you should see:</p>
+
+<pre><code>[nodemon] 1.9.2
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `node --debug server.js`
+Debugger listening on port 5858
+Server listening on port :50717
+</code></pre>
+
+<p>Now your app is being launched by nodemon. Any saved changes you make will re-launch your application. Next you must attach the VS Code debugger to your running app. 
+Go back to your VS Code debug view and click the "Play"<img src="https://raw.githubusercontent.com/bdspen/nodemon_vscode/master/img/play.png" height="18"> icon. The VS Code debugger is now available to you to use and errors and console feedback will appear in your command line where you ran nodemon.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/bdspen/nodemon_vscode">Nodemon vscode</a> is maintained by <a href="https://github.com/bdspen">bdspen</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
