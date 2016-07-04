@@ -22,11 +22,11 @@ To Set up the VS Code debugger, first bring up the debug view by clicking the de
 
 Once you have the debug view open, click the settings gear. This will open a popup that allows you to select your enviornment, in this case, click Node.js.
 
-<img src="./img/2.png" height="400" style="display: inline">
+<img src="https://raw.githubusercontent.com/bdspen/nodemon_vscode/master/img/2.png" height="400" style="display: inline">
 
 VS Code will now create a configuration file, titled launch.json. It should look something like this:
 
-<img src="./img/4.png" height="800">
+<img src="https://raw.githubusercontent.com/bdspen/nodemon_vscode/master/img/4.png" height="800">
 
 <a name="configurations"></a>
 #### Configurations
@@ -46,9 +46,9 @@ Once the launch.json file is setup it's time to change the request you are makin
  the app in debugger mode, but since VS Code does not have any utility like nodemon that will restart the app on new changes, you need to _attach_ the VS Code debugger to the external application that is being run by nodemon.
 To do this simply click on the menu item in the debugger view and change
 
-<img src="./img/launch.png" height="30" style="display: inline"> 
+<img src="https://raw.githubusercontent.com/bdspen/nodemon_vscode/master/img/launch.png" height="30" style="display: inline"> 
 to
-<img src="./img/attach.png" height="30" style="display: inline">.
+<img src="https://raw.githubusercontent.com/bdspen/nodemon_vscode/master/img/attach.png" height="30" style="display: inline">.
 
 #### Running your Application
 You should be all set up, so to run your application with nodemon and debugger attached, got you your command line and type:
@@ -67,4 +67,4 @@ Server listening on port :50717
 ~~~
 
 Now your app is being launched by nodemon. Any saved changes you make will re-launch your application. Next you must attach the VS Code debugger to your running app. 
-Go back to your VS Code debug view and click the "Play"<img src="./img/play.png" height="18"> icon. The VS Code debugger is now available to you to use and errors and console feedback will appear in your command line where you ran nodemon.
+Go back to your VS Code debug view and click the "Play"<img src="https://raw.githubusercontent.com/bdspen/nodemon_vscode/master/img/play.png" height="18"> icon. The VS Code debugger is now available to you to use and errors and console feedback will appear in your command line where you ran nodemon.
