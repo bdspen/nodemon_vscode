@@ -1,7 +1,7 @@
 ### 07/03/2016
 # Using Nodemon and Visual Studio Code Debugger together to Automate Debugging Workflow
-<img src="https://camo.githubusercontent.com/fd1ea21338ceeef34920e44e97d099f3c47a78c3/687474703a2f2f6e6f64656d6f6e2e696f2f6e6f64656d6f6e2e737667" width="150" style="display: inline">
-<img src="https://pbs.twimg.com/profile_images/676630166190166017/UYxw-HcD_400x400.png" width="150" style="display: inline">
+<img src="https://camo.githubusercontent.com/fd1ea21338ceeef34920e44e97d099f3c47a78c3/687474703a2f2f6e6f64656d6f6e2e696f2f6e6f64656d6f6e2e737667" width="150" height="auto" style="display: inline">
+<img src="https://pbs.twimg.com/profile_images/676630166190166017/UYxw-HcD_400x400.png" width="150" heright="auto" style="display: inline">
 
 #### In this tutorial I will explain how to attach the Visual Studio Code debugger to a nodeJS app launched by [Nodemon.](https://github.com/remy/nodemon)
 
@@ -22,11 +22,11 @@ To Set up the VS Code debugger, first bring up the debug view by clicking the de
 
 Once you have the debug view open, click the settings gear. This will open a popup that allows you to select your enviornment, in this case, click Node.js.
 
-<img src="https://raw.githubusercontent.com/bdspen/nodemon_vscode/master/img/2.png" height="400" style="display: inline">
+<img src="https://raw.githubusercontent.com/bdspen/nodemon_vscode/master/img/2.png" height="400" width="auto" style="display: inline">
 
 VS Code will now create a configuration file, titled launch.json. It should look something like this:
 
-<img src="https://raw.githubusercontent.com/bdspen/nodemon_vscode/master/img/4.png" height="800">
+<img src="https://raw.githubusercontent.com/bdspen/nodemon_vscode/master/img/4.png" height="800" width="auto">
 
 <a name="configurations"></a>
 #### Configurations
@@ -46,9 +46,9 @@ Once the launch.json file is setup it's time to change the request you are makin
  the app in debugger mode, but since VS Code does not have any utility like nodemon that will restart the app on new changes, you need to _attach_ the VS Code debugger to the external application that is being run by nodemon.
 To do this simply click on the menu item in the debugger view and change
 
-<img src="https://raw.githubusercontent.com/bdspen/nodemon_vscode/master/img/launch.png" height="30" style="display: inline"> 
+<img src="https://raw.githubusercontent.com/bdspen/nodemon_vscode/master/img/launch.png" height="30" width="auto" style="display: inline"> 
 to
-<img src="https://raw.githubusercontent.com/bdspen/nodemon_vscode/master/img/attach.png" height="30" style="display: inline">.
+<img src="https://raw.githubusercontent.com/bdspen/nodemon_vscode/master/img/attach.png" height="30" width="auto" style="display: inline">.
 
 #### Running your Application
 You should be all set up, so to run your application with nodemon and debugger attached, got you your command line and type:
