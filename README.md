@@ -55,6 +55,10 @@ You should be all set up, so to run your application with nodemon and debugger a
 
 `$ nodemon --debug server.js`
 
+if you would like to specify a particular port to run your application on, you can enter:
+
+`PORT=5000 nodemon --debug server.js`
+
 you should see:
 
 ~~~
