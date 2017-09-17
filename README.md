@@ -51,7 +51,7 @@ to
 <img src="https://raw.githubusercontent.com/bdspen/nodemon_vscode/master/img/attach.png" height="30" width="auto" style="display: inline">.
 
 #### Running your Application
-You should be all set up, so to run your application with nodemon and debugger attached, got you your command line and type:
+You should be all set up, so to run your application with nodemon and debugger attached, go to your command line and type:
 
 `$ nodemon --debug server.js`
 
