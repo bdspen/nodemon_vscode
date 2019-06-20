@@ -18,7 +18,7 @@ If you already have a launch.json for your project you can <a href="#configurati
 
 To Set up the VS Code debugger, first bring up the debug view by clicking the debug icon in the sidebar.
 
-<img src="https://code.visualstudio.com/images/debugging_debugicon.png">
+<img src="https://code.visualstudio.com/assets/docs/editor/debugging/debugicon.png">
 
 Once you have the debug view open, click the settings gear. This will open a popup that allows you to select your enviornment, in this case, click Node.js.
 
