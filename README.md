@@ -1,7 +1,7 @@
 ### 07/03/2016
 # Using Nodemon and Visual Studio Code Debugger together to Automate Debugging Workflow
 <img src="https://camo.githubusercontent.com/fd1ea21338ceeef34920e44e97d099f3c47a78c3/687474703a2f2f6e6f64656d6f6e2e696f2f6e6f64656d6f6e2e737667" width="150" height="auto" style="display: inline">
-<img src="https://pbs.twimg.com/profile_images/676630166190166017/UYxw-HcD_400x400.png" width="150" heright="auto" style="display: inline">
+<img src="https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwitrP3j8fbiAhXum-AKHf4-BFMQjRx6BAgBEAU&url=https%3A%2F%2Fcode.visualstudio.com%2Fupdates&psig=AOvVaw1alB8Dw2EVgJIDNMNIFoov&ust=1561079852827414" width="150" height="auto" style="display: inline">
 
 #### In this tutorial I will explain how to attach the Visual Studio Code debugger to a nodeJS app launched by [Nodemon.](https://github.com/remy/nodemon)
 
