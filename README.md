@@ -32,7 +32,7 @@ If you already have a launch.json for your project you can <a href="#configurati
 
 To Set up the VS Code debugger, first bring up the Run and Debug view by clicking the corresponding icon in the sidebar (usually a play button with a bug).
 
-<img src="./img/debug-icon.png">
+<img src="./img/visual-studio-code-icons/debug-icon.png">
 
 If you don't have a `launch.json` file yet, click the "create a launch.json file" link in the Run and Debug view. Select "Node.js" when prompted for the environment. VS Code will create a `.vscode/launch.json` file in your workspace with some default configurations.
 
