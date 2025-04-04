@@ -27,10 +27,6 @@
 While running a nodeJS app in VS Code debugger mode you have to re-launch the debugger every time you make a change to one of your app files. This takes time and is tedious. VS Code actually allows you to attach a debugger to any currently running nodeJS app.
 So, attaching the debugger to an app launched by nodemon will allow you to use the VS Code debugger in an app that is _automatically re-launched_ on every changed file. This removes a few steps from the development process and streamlines workflow with the VS Code debugger.
 
-## Setting Up Nodemon
-To start, Install [nodemon](https://github.com/remy/nodemon) globally on your machine. by running: `npm install -g nodemon
-` or install locally in your project: `npm install --save-dev nodemon`
-
 ## Setting Up VS Code Debugger
 If you already have a launch.json for your project you can <a href="#configurations">skip</a> this step.
 
