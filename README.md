@@ -1,7 +1,6 @@
 ### Updated April 3, 2025
 # Using Nodemon and Visual Studio Code Debugger together to Automate Debugging Workflow
-<img src="./img/nodemon.svg" width="150" height="auto" style="display: inline">
-<img src="./img/visual-studio-code-icons/vscode.svg" width="150" height="auto" style="display: inline">
+<img src="./img/nodemon.svg" width="150" height="auto" style="display: inline"> <img src="./img/visual-studio-code-icons/vscode.svg" width="150" height="auto" style="display: inline">
 
 ### Quick Start / TL;DR (Attach Method)
 
